@@ -30,9 +30,9 @@ const stats = [
 
 export default function AboutStats() {
     return (
-        <section className="my-16 rounded-3xl bg-[#063d32] p-8 md:my-24 md:p-12">
+        <section className="my-16 rounded-3xl bg-[#063d32] p-8 md:my-24 md:p-6">
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 grid-cols-2">
 
                 {stats.map((stat, index) => {
                     const Icon = stat.icon;
@@ -46,7 +46,7 @@ export default function AboutStats() {
                                 <Icon />
                             </div>
 
-                            <h3 className="mt-4 text-3xl font-bold text-white">
+                            <h3 className="mt-4 sm:text-2xl text-xl font-bold text-white">
                                 {stat.value}
                             </h3>
 

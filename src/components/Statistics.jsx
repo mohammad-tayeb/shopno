@@ -61,7 +61,7 @@ export default function Statistics() {
                                     {item.title}
                                 </p>
 
-                                <h3 className="text-xl font-bold text-gray-800">
+                                <h3 className="sm:text-xl text-sm font-bold text-gray-800">
                                     {item.title === "মোট সদস্য" ? (
                                         <>
                                             <CountUp

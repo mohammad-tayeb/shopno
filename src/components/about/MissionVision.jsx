@@ -130,6 +130,26 @@ export default function MissionVision() {
                 </div>
 
             </div>
+            <section className="px-4 py-10 sm:px-6 sm:py-16">
+                {/* Quote */}
+                <div className="mt-10 rounded-2xl bg-gradient-to-r from-[#eaf5ee] to-[#f7faf8] px-5 py-8 text-center sm:mt-16 sm:rounded-3xl sm:px-6 sm:py-12">
+
+                    <p className="text-3xl leading-none text-green-700 sm:text-4xl">
+                        “
+                    </p>
+
+                    <h3 className="mx-auto mt-2 max-w-3xl text-xl font-bold leading-8 text-[#163d35] sm:mt-3 sm:text-2xl sm:leading-relaxed md:text-3xl">
+                        একসাথে সঞ্চয় করি, একসাথে এগিয়ে যাই,
+                        <br className="hidden sm:block" />
+                        একসাথে গড়ি সুন্দর ভবিষ্যৎ।
+                    </h3>
+
+                    <p className="mt-4 text-sm font-semibold text-green-700 sm:mt-5 sm:text-base">
+                        — স্বপ্ন (সাতকানিয়া-লোহাগড়া)
+                    </p>
+
+                </div>
+            </section>
         </section>
     );
 }

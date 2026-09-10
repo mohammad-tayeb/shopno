@@ -79,10 +79,10 @@ export default function RulesPage() {
     ];
 
     return (
-        <main className="max-w-6xl mx-auto mt-12">
+        <main className="max-w-6xl mx-auto mt-16">
 
             {/* Introduction */}
-            <section className="mx-auto max-w-7xl px-4 py-12 md:py-20">
+            <section className="mx-auto max-w-6xl px-6 py-12 md:py-20">
 
                 <div className="mx-auto max-w-3xl text-center">
 
