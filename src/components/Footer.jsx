@@ -91,10 +91,6 @@ export default function Footer() {
                         © ২০২৬ স্বপ্ন (সাতকানিয়া-লোহাগড়া) একটি আর্থিক সমিতি।
                         সর্বস্বত্ব সংরক্ষিত।
                     </p>
-
-                    <p className="font-bold">
-                        MTM Sites
-                    </p>
                 </div>
 
             </div>
