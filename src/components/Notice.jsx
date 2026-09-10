@@ -2,7 +2,7 @@ import { FiBell } from "react-icons/fi";
 
 export default function Notice() {
     return (
-        <section className="my-8 sm:mx-10 mx-2">
+        <section className="my-8 sm:mx-10 mx-0">
             <div className="flex flex-col items-start justify-between gap-5 rounded-xl border border-green-100 bg-gradient-to-r from-[#eef6ed] to-[#f6faf5] p-5 md:flex-row md:items-center">
 
                 <div className="flex items-center gap-4">

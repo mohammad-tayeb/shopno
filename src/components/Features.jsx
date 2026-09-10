@@ -36,7 +36,7 @@ const features = [
 
 export default function Features() {
     return (
-        <section className="py-8 sm:mx-10 mx-2">
+        <section className="py-8 sm:mx-10 mx-6">
 
             <div className="mb-8 text-center">
                 <h2 className="text-3xl font-bold text-[#163d35]">
@@ -46,7 +46,7 @@ export default function Features() {
                 <div className="mx-auto mt-3 h-1 w-12 rounded bg-green-600" />
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5 grid-cols-2">
 
                 {features.map((feature, index) => {
                     const Icon = feature.icon;

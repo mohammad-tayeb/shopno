@@ -39,7 +39,7 @@ const stats = [
 
 export default function Statistics() {
     return (
-        <section className="relative z-10 mx-2 sm:mx-10">
+        <section className="relative z-10 sm:mx-10 mx-0">
             <div className="grid overflow-hidden rounded-2xl bg-white shadow-xl sm:grid-cols-4 grid-cols-2">
 
                 {stats.map((item, index) => {
