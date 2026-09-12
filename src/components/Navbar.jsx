@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,10 @@ export default function Navbar() {
         {
             name: "নিয়মাবলী",
             href: "/rule",
+        },
+        {
+            name: "বিজ্ঞপ্তিসমূহ",
+            href: "/allNotices",
         }
     ];
 
@@ -38,10 +43,14 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="flex items-center gap-3"
                 >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white sm:h-14 sm:w-14">
-                        <span className="text-xl text-green-700 sm:text-2xl">
-                            🌱
-                        </span>
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white sm:h-14 sm:w-14">
+                        <Image
+                            src="/2.png"
+                            alt="স্বপ্ন লোগো"
+                            width={56}
+                            height={56}
+                            className="h-full w-full object-contain p-1"
+                        />
                     </div>
 
                     <div className="leading-tight">
@@ -64,11 +73,10 @@ export default function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`border-b-2 pb-2 transition ${
-                                    isActive
+                                className={`border-b-2 pb-2 transition ${isActive
                                         ? "border-green-400 text-green-300"
                                         : "border-transparent text-white hover:text-green-300"
-                                }`}
+                                    }`}
                             >
                                 {link.name}
                             </Link>
@@ -90,11 +98,10 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             <div
-                className={`overflow-hidden border-t border-white/10 bg-[#063d32] transition-all duration-300 md:hidden ${
-                    isOpen
+                className={`overflow-hidden border-t border-white/10 bg-[#063d32] transition-all duration-300 md:hidden ${isOpen
                         ? "max-h-96 opacity-100"
                         : "max-h-0 opacity-0"
-                }`}
+                    }`}
             >
                 <nav className="mx-auto max-w-7xl px-4 py-3">
                     {navLinks.map((link) => {
@@ -105,11 +112,10 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={closeMenu}
-                                className={`mt-1 block rounded-lg px-4 py-3 transition ${
-                                    isActive
+                                className={`mt-1 block rounded-lg px-4 py-3 transition ${isActive
                                         ? "bg-white/10 font-semibold text-green-300"
                                         : "text-white hover:bg-white/10 hover:text-green-300"
-                                }`}
+                                    }`}
                             >
                                 {link.name}
                             </Link>

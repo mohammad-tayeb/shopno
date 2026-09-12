@@ -46,7 +46,7 @@ export default function Features() {
                 <div className="mx-auto mt-3 h-1 w-12 rounded bg-green-600" />
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5 grid-cols-2">
+            <div className="grid sm:gap-5 gap-2 sm:grid-cols-2 lg:grid-cols-5 grid-cols-2">
 
                 {features.map((feature, index) => {
                     const Icon = feature.icon;
@@ -54,13 +54,13 @@ export default function Features() {
                     return (
                         <div
                             key={index}
-                            className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                            className="rounded-xl border border-gray-200 bg-white sm:p-6 p-4  text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                         >
-                            <div className="mb-5 flex justify-center text-5xl text-[#13765c]">
+                            <div className="mb-5 flex justify-center sm:text-5xl text-4xl text-[#13765c]">
                                 <Icon />
                             </div>
 
-                            <h3 className="font-bold text-[#173d35]">
+                            <h3 className="font-bold text-[#173d35] sm:text-2xl text-sm">
                                 {feature.title}
                             </h3>
 

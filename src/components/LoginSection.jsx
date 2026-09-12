@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
@@ -83,11 +84,10 @@ export default function LoginSection() {
                             <input
                                 type="text"
                                 placeholder="আপনার সদস্য আইডি দিন"
-                                className={`w-full rounded-lg border py-3 pl-12 pr-4 outline-none transition focus:border-green-500 ${
-                                    memberErrors.memberId
+                                className={`w-full rounded-lg border py-3 pl-12 pr-4 outline-none transition focus:border-green-500 ${memberErrors.memberId
                                         ? "border-red-500"
                                         : "border-gray-200"
-                                }`}
+                                    }`}
                                 {...registerMember("memberId", {
                                     required: "সদস্য আইডি দিন",
                                 })}
@@ -113,11 +113,10 @@ export default function LoginSection() {
                                         : "password"
                                 }
                                 placeholder="আপনার পাসওয়ার্ড দিন"
-                                className={`w-full rounded-lg border py-3 pl-12 pr-12 outline-none transition focus:border-green-500 ${
-                                    memberErrors.password
+                                className={`w-full rounded-lg border py-3 pl-12 pr-12 outline-none transition focus:border-green-500 ${memberErrors.password
                                         ? "border-red-500"
                                         : "border-gray-200"
-                                }`}
+                                    }`}
                                 {...registerMember("password", {
                                     required: "পাসওয়ার্ড দিন",
                                     minLength: {
@@ -157,17 +156,17 @@ export default function LoginSection() {
                         )}
                     </div>
 
-                    <button
-                        type="button"
+                    <Link
+                        href="/forgot-password"
                         className="text-sm text-green-700 hover:underline"
                     >
                         পাসওয়ার্ড ভুলে গেছেন?
-                    </button>
+                    </Link>
 
                     <button
                         type="submit"
                         disabled={memberSubmitting}
-                        className="flex w-full items-center justify-center rounded-lg bg-[#08633f] py-3 font-semibold text-white transition hover:bg-[#074f33] disabled:cursor-not-allowed disabled:opacity-70"
+                        className="flex mt-3 w-full items-center justify-center rounded-lg bg-[#08633f] py-3 font-semibold text-white transition hover:bg-[#074f33] disabled:cursor-not-allowed disabled:opacity-70"
                     >
                         {memberSubmitting ? (
                             <span className="loading loading-spinner loading-sm" />
@@ -207,11 +206,10 @@ export default function LoginSection() {
                             <input
                                 type="text"
                                 placeholder="অ্যাডমিন আইডি দিন"
-                                className={`w-full rounded-lg border py-3 pl-12 pr-4 outline-none transition focus:border-blue-500 ${
-                                    adminErrors.adminId
+                                className={`w-full rounded-lg border py-3 pl-12 pr-4 outline-none transition focus:border-blue-500 ${adminErrors.adminId
                                         ? "border-red-500"
                                         : "border-gray-200"
-                                }`}
+                                    }`}
                                 {...registerAdmin("adminId", {
                                     required: "অ্যাডমিন আইডি দিন",
                                 })}
@@ -237,11 +235,10 @@ export default function LoginSection() {
                                         : "password"
                                 }
                                 placeholder="পাসওয়ার্ড দিন"
-                                className={`w-full rounded-lg border py-3 pl-12 pr-12 outline-none transition focus:border-blue-500 ${
-                                    adminErrors.password
+                                className={`w-full rounded-lg border py-3 pl-12 pr-12 outline-none transition focus:border-blue-500 ${adminErrors.password
                                         ? "border-red-500"
                                         : "border-gray-200"
-                                }`}
+                                    }`}
                                 {...registerAdmin("password", {
                                     required: "পাসওয়ার্ড দিন",
                                     minLength: {
@@ -281,17 +278,17 @@ export default function LoginSection() {
                         )}
                     </div>
 
-                    <button
-                        type="button"
-                        className="text-sm text-blue-700 hover:underline"
+                    <Link
+                        href="/forgot-password"
+                        className="text-sm text-green-700 hover:underline"
                     >
                         পাসওয়ার্ড ভুলে গেছেন?
-                    </button>
+                    </Link>
 
                     <button
                         type="submit"
                         disabled={adminSubmitting}
-                        className="flex w-full items-center justify-center rounded-lg bg-[#125785] py-3 font-semibold text-white transition hover:bg-[#0d456b] disabled:cursor-not-allowed disabled:opacity-70"
+                        className="flex w-full mt-3 items-center justify-center rounded-lg bg-[#125785] py-3 font-semibold text-white transition hover:bg-[#0d456b] disabled:cursor-not-allowed disabled:opacity-70"
                     >
                         {adminSubmitting ? (
                             <span className="loading loading-spinner loading-sm" />

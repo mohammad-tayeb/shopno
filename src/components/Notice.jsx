@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiBell } from "react-icons/fi";
 
 export default function Notice() {
@@ -22,9 +23,9 @@ export default function Notice() {
                     </div>
                 </div>
 
-                <button className="rounded-lg bg-[#063d32] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#075441]">
+                <Link href="/allNotices" className="rounded-lg bg-[#063d32] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#075441]">
                     সব নোটিশ দেখুন
-                </button>
+                </Link>
 
             </div>
         </section>

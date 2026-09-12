@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
     FiMapPin,
     FiPhone,
@@ -17,8 +19,14 @@ export default function Footer() {
                     {/* About */}
                     <div>
                         <div className="flex items-center gap-3">
-                            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl">
-                                🌱
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white sm:h-14 sm:w-14">
+                                <Image
+                                    src="/2.png"
+                                    alt="স্বপ্ন লোগো"
+                                    width={56}
+                                    height={56}
+                                    className="h-full w-full object-contain p-1"
+                                />
                             </div>
 
                             <div>
@@ -45,11 +53,17 @@ export default function Footer() {
                         </h3>
 
                         <ul className="space-y-2 text-gray-300">
-                            <li>হোম</li>
-                            <li>আমাদের সম্পর্কে</li>
-                            <li>নিয়মাবলী</li>
-                            <li>সদস্য তালিকা</li>
-                            <li>যোগাযোগ</li>
+                            <li>
+                                <Link href="/about" className="transition hover:text-white">
+                                    আমাদের সম্পর্কে
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/rule" className="transition hover:text-white">
+                                    নিয়মাবলী
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
